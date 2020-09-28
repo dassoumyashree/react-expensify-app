@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import 'core-js';
+// import 'regenerator-runtime/runtime';
+import "@babel/polyfill";
 import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
@@ -9,6 +12,7 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 // import './playground/promises';
 
 // Provider component allows us to provide the store to all of the components that make up our appl.
@@ -48,7 +52,7 @@ const renderApp = () => {
     }
 }
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 // ReactDOM.render(<AppRouter />, document.getElementById('app'));
 

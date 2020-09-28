@@ -1,0 +1,19 @@
+.button {
+    background: $blue;
+    border: none;
+    color: white;
+    display: inline-block;  // vertical margin & padding actually get taken into effect (for links) // by default our links are display: inline
+    font-size: $font-size-large;
+    font-weight: 300;
+    line-height: 1; // since button text one line no need for extra line height
+    padding: $s-size;
+    text-decoration: none;
+}
+
+.button--link {
+    background: none;
+}
+
+.button--secondary {
+    background: #888;
+}
